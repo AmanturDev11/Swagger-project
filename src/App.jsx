@@ -1,11 +1,5 @@
-import SignUp from "./components/registration/SignUp";
+import AppRoutes from "./routes/AppRoutes";
 
-const App = () => {
-	return (
-		<div>
-			<SignUp />
-		</div>
-	);
-};
+const App = () => <AppRoutes />;
 
 export default App;

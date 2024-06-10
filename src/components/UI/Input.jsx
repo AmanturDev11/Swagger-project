@@ -1,16 +1,8 @@
 /* eslint-disable react/prop-types */
-import { TextField } from "@mui/material";
+import { TextField } from '@mui/material';
 
-const Input = ({ onChange, value, type = "text", placeholder, ...rest }) => {
-	return (
-		<TextField
-			onChange={onChange}
-			value={value}
-			type={type}
-			placeholder={placeholder}
-			{...rest}
-		/>
-	);
+const Input = ({ type = 'text',value,onChange, ...rest }) => {
+  return <TextField type={type} value={value} onChange={onChange} {...rest} />;
 };
 
 export default Input;

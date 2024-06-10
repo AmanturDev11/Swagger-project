@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import { ButtonBase as MuiButton } from "@mui/material";
+import { Button as MuiButton } from "@mui/material";
 
-const Button = ({ children, onClick, type = "button", ...rest }) => {
+const Button = ({ children, type = "button", ...rest }) => {
 	return (
-		<MuiButton type={type} onClick={onClick} {...rest}>
+		<MuiButton type={type} {...rest}>
 			{children}
 		</MuiButton>
 	);

@@ -4,6 +4,7 @@ import Button from "../UI/Button";
 import { signInPost } from "../../store/authSlice/authThunk";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import scss from "./SignIn.module.scss";
 
 const SignIn = () => {
 	const [email, setEmail] = useState("");
@@ -24,18 +25,29 @@ const SignIn = () => {
 		// setEmail("");
 		// setPassword("");
 	};
-
+	const handleNavigate = () => {
+		navigate("/signUp");
+	};
 	return (
-		<form onSubmit={handleSubmit}>
-			<Input label="email" value={email} onChange={handlerEmail} />
-			<Input
-				label="Пароль"
-				onChange={handlerPassword}
-				value={password}
-				// type="password"
-			/>
-			<Button type="submit">Вход</Button>
-		</form>
+		<div className={scss.SignIn}>
+			<div className="container">
+				<div className={scss.content}>
+					<form onSubmit={handleSubmit}>
+						<div className={scss.cards}>
+							<Input label="email" value={email} onChange={handlerEmail} />
+							<Input
+								label="Пароль"
+								onChange={handlerPassword}
+								value={password}
+								// type="password"
+							/>
+							<Button type="submit">Войти</Button>
+							<Button onClick={handleNavigate}>Зарегистрироваться</Button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	);
 };
 

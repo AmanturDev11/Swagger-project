@@ -4,6 +4,7 @@ import { authPost } from "../../store/authSlice/authThunk";
 import Button from "../UI/Button";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import scss from "./SignUp.module.scss";
 
 const SignUp = () => {
 	const navigate = useNavigate();
@@ -30,22 +31,35 @@ const SignUp = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<Input
-				label="Имя пользователя"
-				onChange={(e) => setName(e.target.value)}
-				value={name}
-				// type="text"
-			/>
-			<Input label="Почта" onChange={handlerEmail} value={email} type="email" />
-			<Input
-				label="Пароль"
-				onChange={handlerPassword}
-				value={password}
-				type="password"
-			/>
-			<Button type="submit">SigIn</Button>
-		</form>
+		<div className={scss.SignUp}>
+			<div className="container">
+				<div className={scss.content}>
+					<form onSubmit={handleSubmit}>
+						<div className={scss.cards}>
+							<Input
+								label="Имя пользователя"
+								onChange={(e) => setName(e.target.value)}
+								value={name}
+								// type="text"
+							/>
+							<Input
+								label="Почта"
+								onChange={handlerEmail}
+								value={email}
+								type="email"
+							/>
+							<Input
+								label="Пароль"
+								onChange={handlerPassword}
+								value={password}
+								type="password"
+							/>
+							<Button type="submit">Зарегистрироваться</Button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	);
 };
 

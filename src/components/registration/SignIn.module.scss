@@ -1,0 +1,43 @@
+.SignIn {
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 100px;
+		form {
+			border: 2px solid;
+			border-radius: 10px;
+			width: 380px;
+			height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			// background: rgba(0, 0, 0, 0.5);
+			box-sizing: border-box;
+			box-shadow: 0 15px 25px 10px rgba(0, 0, 0, 0.5);
+			transition: 0.5s;
+			// margin-top: 10px;
+			// letter-spacing: 4px;
+			&:hover {
+				// background: #03e9f4;
+				// color: red;
+				border-radius: 5px;
+				box-shadow: 0 0 5px black, 0 0 25px black, ;
+			}
+			.cards {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 20px;
+				gap: 30px;
+				// background: rgba(0, 0, 0, 0.5);
+				box-sizing: border-box;
+				box-shadow: 0 15px 25px 10px rgba(0, 0, 0, 0.5);
+				border: 1px solid;
+				border-radius: 10px;
+			}
+		}
+	}
+}
